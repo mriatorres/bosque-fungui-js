@@ -8,6 +8,16 @@
 <title>Bosque Fungui</title>
 </head>
 <body>
+    <div class="playAudio">
+        <audio id="myAudio" autoplay>
+            <source src="https://www.chosic.com/wp-content/uploads/2022/10/Wallpaper.mp3" type="audio/ogg">
+          </audio>
+          
+          <p>
+            <button onclick="playAudio()">Play Audio</button>
+            <button onclick="pauseAudio()">Pause Audio</button>
+          </p>
+    </div>
 <div class="game-container">
 <canvas id="game"></canvas>
 <div class="btns">
@@ -23,5 +33,16 @@
 </div>
 <script src="./maps.js"></script>
 <script src="./game.js"></script>
+<script>
+    function playAudio() {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    }
+  
+    function pauseAudio() {
+      var audio = document.getElementById("myAudio");
+      audio.pause();
+    }
+  </script>
 </body>
 </html>

@@ -18,6 +18,12 @@ const playerPosition = {
   y: undefined
 }
 
+//Posicion premio
+const giftPosition = {
+  x: undefined,
+  y: undefined,
+};
+
 window.addEventListener('load', setCanvasSize);
 window.addEventListener('resize', setCanvasSize);
 
@@ -31,7 +37,7 @@ function setCanvasSize() {
   canvas.setAttribute('width', canvasSize);
   canvas.setAttribute('height', canvasSize);
   
-  elementsSize = (canvasSize / 10) - 1;
+  elementsSize = (canvasSize / 10) - 2;
 
   startGame();
 }
@@ -42,13 +48,13 @@ function startGame() {
   game.font = elementsSize + 'px Verdana';
   game.textAlign = 'end';
  //Elementos mapa
-  const map = maps[0];
+  const map = maps[2];
   //Filas mapa
   const mapRows = map.trim().split('\n');
   //Filas y columnas
   const mapRowCols = mapRows.map(row => row.trim().split(''));
 
-    console.log({map, mapRows, mapRowCols});
+   // console.log({map, mapRows, mapRowCols});
 
   /*for (let row = 1; row <= 10; row++) {
     for (let col = 1; col <= 10; col++) {
@@ -59,7 +65,7 @@ function startGame() {
     elementsSize * row);
     }
   }*/
-  
+  game.clearRect(0,0,canvasSize, canvasSize)
   mapRowCols.forEach((row, rowI) => {
     row.forEach((col, colI) => {
       const emoji = emojis[col];
@@ -68,19 +74,32 @@ function startGame() {
       game.fillText(emoji, posX, posY);
 
       //Posicion del jugador
-      if(col == 'O') {
-        playerPosition.x = posX;
-        playerPosition.y = posY;
-        console.log({playerPosition});
+      if (col == 'O') {
+        if(!playerPosition.x && !playerPosition.y) {
+          playerPosition.x = posX;
+          playerPosition.y = posY;
+          console.log({playerPosition});
+        }
+      }else if(col == 'I'){
+        giftPosition.x =  posX;
+        giftPosition.y = posY
       }
+      game.fillText(emoji, posX, posY);
     });
   });
   movePlayer();
 }
 
 function movePlayer() {
-  game.fillText(emojis['PLAYER'], playerPosition.x, playerPosition.y)
-
+  const giftCollisionX = playerPosition.x.toFixed(3) == giftPosition.x.toFixed(3);
+  const giftCollisionY = playerPosition.y.toFixed(3) == giftPosition.y.toFixed(3);
+  const giftCollision = giftCollisionX && giftCollisionY;
+  
+  //Posicion jugador coincide con la del regalo
+  if (giftCollision) {
+    console.log('Subiste de nisvel!');
+  }
+  game.fillText(emojis['PLAYER'], playerPosition.x, playerPosition.y); 
 }
 
 //Movimientos jugadores teclas
@@ -101,22 +120,41 @@ function moveByKeys(event){
 
 function moveUp() {
   console.log('Arriba');
+  if((playerPosition.y - elementsSize) < elementsSize){
+    console.log('OUT');
+  }else{
   playerPosition.y -= elementsSize
-  movePlayer();
+  startGame();
+}
 }
 
 function moveLeft(){
   console.log('izquierda');
-  movePlayer();
+  if((playerPosition.x - elementsSize) < elementsSize){
+    console.log('OUT');
+  }else{
+  playerPosition.x-= elementsSize
+  startGame();
+}
 }
 
 function moveRight(){
   console.log('derecha');
-  movePlayer();
+  if((playerPosition.x + elementsSize) > canvasSize){
+    console.log('OUT');
+  }else{
+  playerPosition.x += elementsSize
+  startGame();
+}
 }
 
 function moveDown(){
   console.log('abajo');
-  movePlayer();
+  console.log('derecha');
+  if((playerPosition.y + elementsSize) > canvasSize){
+    console.log('OUT');
+  }else{
+  playerPosition.y += elementsSize
+ startGame();
 }
-
+}

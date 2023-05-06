@@ -1,10 +1,21 @@
 body {
-    background-color: #8edd65;
+  
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #18122B;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 0px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 0px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 0px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 0px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
     margin: 0;
     padding: 0;
+
 }
+
+
 
 .game-container {
     display: flex;
@@ -16,9 +27,9 @@ body {
 }
 
 canvas {
-    border: 4px solid #deba53;
-    border-radius: 8px;
-    background-color: #ffef9f;
+    border: 4px solid #635985;
+    border-radius: 10px;
+    background-color: #393053;
 }
 
 .btns {
@@ -56,6 +67,8 @@ p {
     margin: 0;
     width: 100%;
 }
+
+
 
 @media (max-width: 440px) {
     button {
