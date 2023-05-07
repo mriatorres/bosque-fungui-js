@@ -4,20 +4,25 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="./style.css">
 <title>Bosque Fungui</title>
 </head>
 <body>
     <div class="playAudio">
         <audio id="myAudio" autoplay>
-            <source src="https://www.chosic.com/wp-content/uploads/2022/10/Wallpaper.mp3" type="audio/ogg">
+            <source src="https://www.zapsplat.com/wp-content/uploads/2015/music-game/music_zapsplat_game_music_zen_calm_soft_arpeggios_013.mp3" type="audio/ogg">
           </audio>
           
-          <p>
-            <button onclick="playAudio()">Play Audio</button>
-            <button onclick="pauseAudio()">Pause Audio</button>
-          </p>
+          <div class="soundOn">
+          <i class="fa-solid fa-volume-high" onclick="playAudio()"></i>
+          </div>
+
+          <div class="soundOff">
+            <i class="fa-solid fa-volume-xmark" onclick="pauseAudio()"></i>
+          </div>
     </div>
+
 <div class="game-container">
 <canvas id="game"></canvas>
 <div class="btns">
@@ -34,7 +39,8 @@
 <script src="./maps.js"></script>
 <script src="./game.js"></script>
 <script>
-    function playAudio() {
+   
+     function playAudio() {
       var audio = document.getElementById("myAudio");
       audio.play();
     }
