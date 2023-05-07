@@ -43,12 +43,11 @@ function setCanvasSize() {
 }
 
 function startGame() {
-  console.log({ canvasSize, elementsSize });
 
   game.font = elementsSize + 'px Verdana';
   game.textAlign = 'end';
  //Elementos mapa
-  const map = maps[2];
+  const map = maps[1];
   //Filas mapa
   const mapRows = map.trim().split('\n');
   //Filas y columnas
@@ -120,7 +119,7 @@ function moveByKeys(event){
 
 function moveUp() {
   console.log('Arriba');
-  if((playerPosition.y - elementsSize) < elementsSize){
+  if((playerPosition.y ) < elementsSize){
     console.log('OUT');
   }else{
   playerPosition.y -= elementsSize
@@ -130,7 +129,7 @@ function moveUp() {
 
 function moveLeft(){
   console.log('izquierda');
-  if((playerPosition.x - elementsSize) < elementsSize){
+  if((playerPosition.x ) < elementsSize){
     console.log('OUT');
   }else{
   playerPosition.x-= elementsSize
