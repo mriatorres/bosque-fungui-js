@@ -68,7 +68,28 @@ p {
     width: 100%;
 }
 
+/*Audio*/
+.playAudio{
+    margin-top: 0.5%;
+    width: 10%;
+    float: right;
+    margin-right: 1%;
+    display: flex;
+    overflow: hidden;
+}
 
+.soundOn{
+    flex: 0 0 50%;
+}
+
+.soundOff{
+    flex: 0 0 50%;
+}
+i{
+    font-size: medium;
+    color: #fffb80;
+
+}
 
 @media (max-width: 440px) {
     button {
