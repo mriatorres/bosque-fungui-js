@@ -28,8 +28,23 @@
             <i class="fa-solid fa-volume-xmark" onclick="pauseAudio()"></i>
           </div>
     </div>
+<div class="volverJugar inactive">
+  <button>VOLVER A JUGAR</button>
+</div>
 
-<div class="game-container">
+<div class="inicio">
+  <div class="titulo">
+    <h1>BOSQUE FUNGUI</h1>
+  </div> <br>
+  <div class="texto">Presiona jugar <br>
+  </div><br>
+  <div class="emoji"><span>🍄</span></div> <br>
+  <div class="jugar">
+    <button onclick="jugar()">JUGAR</button>
+  </div>
+</div>
+
+<div class="game-container inactive">
 <canvas id="game"></canvas>
 <div class="btns">
 <button id="up">Arriba</button>
