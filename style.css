@@ -46,8 +46,10 @@ button {
     border-color: #deba53;
     font-family: inherit;
     margin: 0;
-    padding: 5px 20px;
+    padding: 5px 10px;
     width: 100px;
+    font-family: 'Silkscreen', cursive;
+
 }
 
 button:not(:last-child) {
@@ -66,6 +68,7 @@ p {
     display: block;
     margin: 0;
     width: 100%;
+    font-family: 'Silkscreen', cursive;
 }
 
 /*Audio*/
@@ -90,6 +93,61 @@ i{
     color: #fffb80;
 
 }
+
+/*Alertas*/
+
+.swal-overlay {
+    background-color: #18122B;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 0px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 0px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 0px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 0px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  }
+
+.swal-modal {
+    background-color: #18122B;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 0px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 0px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 0px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 0px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.swal-text {
+    display: block;
+    margin: 22px;
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    color: #fffb80;
+  }
+  
+  
+
+
+.swal-title {
+    font-size: xx-large;
+    font-family: 'Silkscreen', cursive;
+    color: #fffb80;
+
+}
+
+.swal-button {
+    
+    padding: 15px 5px;
+    text-align: center;
+    border: 1px solid #18122B;
+    font-family: 'Silkscreen', cursive;
+    font-size: smaller;
+    border-radius: 2px;
+    background-color: #18122B;
+    color: #fffb80;
+    font-size: 12px;
+  }
 
 @media (max-width: 440px) {
     button {
