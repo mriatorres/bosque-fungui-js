@@ -5,6 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <title>Bosque Fungui</title>
 </head>
@@ -33,9 +39,15 @@
 </div>
 <div class="messages">
 
-<p>Párrafo de ejemplo</p>
+<p>Vidas: <span id="lives"></span></p>
+<p>Tiempo: 🕒 <span id="time"></span></p>
+<p>Record: 🏁 <span id="record"></span></p>
+<p id="result"></p>
+
+
 </div>
 </div>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="./maps.js"></script>
 <script src="./game.js"></script>
 <script>
