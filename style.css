@@ -149,6 +149,39 @@ i{
     font-size: 12px;
   }
 
+.inicio{
+  font-size: xx-large;
+  font-family: 'Silkscreen', cursive;
+  color: #fffb80;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+}
+.texto{
+    place-self: center;
+}
+.emoji{
+    place-self: center;
+}
+.jugar{
+    place-self: center;
+
+}
+
+.volverJugar{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    margin-top: 10%;
+}
+.inactive{
+    display: none;
+}
 @media (max-width: 440px) {
     button {
         margin-top: 25px;
