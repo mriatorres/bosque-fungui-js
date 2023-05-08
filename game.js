@@ -171,7 +171,10 @@ function movePlayer() {
   });
   
   if (enemyCollision) {
-    levelFail();
+    showCollision();
+    setTimeout(levelFail, 1000);
+
+    
   }
 
   game.fillText(emojis['PLAYER'], playerPosition.x, playerPosition.y);
@@ -182,6 +185,14 @@ function levelWin(){
   console.log('Subiste de nivel');
   level ++;
   startGame(); 
+}
+
+function showCollision(){
+  fireExp();
+  function fireExp(){
+    game.fillText(emojis['BOMB_COLLISION'], playerPosition.x, playerPosition.y);
+}
+
 }
 
 //Perder nivel
@@ -259,6 +270,7 @@ function showTime(){
 function showRecord(){
   spanRecord.innerHTML = localStorage.getItem('record_time');
 }
+
 
 //Milisegundos a segundos
 function millisToMinutesAndSeconds(millis) {
