@@ -27,6 +27,7 @@ const spanLives = document.querySelector('#lives');
 const spanTime= document.querySelector('#time');
 const spanRecord= document.querySelector('#record');
 const pResult= document.querySelector('#result');
+const spanLevel = document.querySelector('#nivel');
 
 
 let canvasSize;
@@ -107,6 +108,9 @@ function startGame() {
   const mapRows = map.trim().split('\n');
   //Filas y columnas
   const mapRowCols = mapRows.map(row => row.trim().split(''));
+
+  //Niveles
+  showLevel();
 
   //Vidas
   showLives();
@@ -226,6 +230,8 @@ function gameWin() {
   clearInterval(timeInterval);
   document.querySelector('#game').classList.add('inactive');
   document.querySelector('.btns').classList.add('inactive');
+  document.querySelector('.niveles').classList.add('inactive');
+
   document.querySelector('.volverJugar').classList.remove('inactive');
 
   swal({title:'¡Felicidades!', 
@@ -236,7 +242,7 @@ function gameWin() {
   const playerTime = millisToMinutesAndSeconds(Date.now() - timeStart);
 
   if(recordTime) {
-    if(recordTime >= playerTime) {
+    if(recordTime > playerTime) {
       localStorage.setItem('record_item', playerTime);
       swal('¡Excelente!','¡Ganaste todos los niveles y \nsuperaste el record establecido anteriormente!'); 
     }else{
@@ -248,6 +254,11 @@ function gameWin() {
   location.reload();
 }
 
+}
+
+//Mostrar nivel
+function showLevel(){
+  spanLevel.innerHTML = level;
 }
 
 //Mostrar vidas
@@ -268,7 +279,7 @@ function showTime(){
 
 //Mostrar tiempo record
 function showRecord(){
-  spanRecord.innerHTML = localStorage.getItem('record_time');
+  spanRecord.innerHTML = localStorage.getItem('record_item');
 }
 
 
