@@ -119,3 +119,63 @@ const emojis = {
   XXXXX--IXX
 
  `);
+
+  //Nivel 7
+  maps.push(`
+   XXXXXXXXXX
+   XXXXXXXXIX
+   XXX----X-X
+   XXX-XX-X-X
+   X---XX-X-X
+   X-XXXXXXXX
+   X--XXXXXXX
+   XX--XXXXXX
+   XXX-X---XX
+   XXX---XOXX
+
+`);
+
+//Nivel 8
+maps.push(`
+XXX----X-X
+XXX-X---O-
+X----XXXXX
+XXXXX-XXXX
+X----XXXXX
+XX-XXXXXXX
+XX------XX
+XXX-XXX-XX
+XI--XXXXXX
+XX-XXXXXXX
+
+`);
+
+//Nivel 9
+maps.push(`
+ XXXXXXXXXX
+ XX--X--IXX
+ XX----XXXX
+ XX-XXX--XX
+ XX-X----XX
+ X----XX-XX
+ --XX-XXX-X
+ -X-----X-X
+ -O-XXX---X
+ X-XXXXXXXX
+ 
+`);
+
+//Nivel 10
+maps.push(`
+ XXX----X-X
+ X---XX-X-X
+ X-XXXX---X
+ X-XXXXXX-X
+ ---XIX---X
+ --X--XX--X
+ X-X-XX---X
+ X-----XX-X
+ X--X-X---X
+ XXX------X
+
+`);
