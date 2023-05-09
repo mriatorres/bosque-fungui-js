@@ -125,9 +125,9 @@ const emojis = {
    XXXXXXXXXX
    XXXXXXXXIX
    XXX------X
-   XXX-XX-X-X
+   XXX--X-X-X
    X---XX-X-X
-   X-XXXXXXXX
+   X--XXXXXXX
    X--XXXXXXX
    XX--XXXXXX
    XXX-X---XX
@@ -137,14 +137,14 @@ const emojis = {
 
 //Nivel 8
 maps.push(`
-XXX----X-X
-XXX-X---O-
+XXX-----XX
+XXX--X--O-
 X----XXXXX
-XXXXX-XXXX
+XXXX--XXXX
 X----XXXXX
 XX-XXXXXXX
 XX------XX
-XXX-XXX-XX
+XXX--X--XX
 XI--XXXXXX
 XX-XXXXXXX
 
@@ -155,27 +155,27 @@ maps.push(`
  XXXXXXXXXX
  XX--X--IXX
  XX----XXXX
- XX-XXX--XX
+ XX--XX--XX
  XX-X----XX
- X----XX-XX
- --XX-XXX-X
- -X-----X-X
- -O-XXX---X
+ X----XX--X
+ --XX-XX--X
+ -XX------X
+ -O--XX---X
  X-XXXXXXXX
  
 `);
 
 //Nivel 10
 maps.push(`
- XXX----X-X
- X---XX-X-X
- X-XXXX---X
- X-XXXXXX-X
+ XXX------X
+ X---XX---O
+ X--XXX---X
+ --XXXXX--X
  ---XIX---X
  --X--XX--X
- X-X-XX---X
- X-----XX-X
- X--X-X---X
+ --X-XX---X
+ X-----X--X
+ X-X--X---X
  XXX------X
 
 `);
