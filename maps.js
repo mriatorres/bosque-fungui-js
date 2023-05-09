@@ -3,10 +3,10 @@
  * El final de cada nivel debe ser el inicio del siguiente
 */
 
-//Northern pine snake
-//Meadow Jumping Mouse
 //Southern Appalachian Woodrat
 // the western Appalachian mountains of Virginia
+
+
 const emojis = {
     '-': ' ',
     'O': '🚪',
@@ -18,7 +18,8 @@ const emojis = {
     'WIN': '🏆',
     'HEART': '❤️',
   };
-  
+
+  //Nivel 0  
   const maps = [];
   maps.push(`
     IXXXXXXXXX
@@ -32,6 +33,8 @@ const emojis = {
     -XXXXXXXXX
     OXXXXXXXXX
   `);
+
+  //Nivel 1
   maps.push(`
     O--XXXXXXX
     X--XXXXXXX
@@ -44,6 +47,8 @@ const emojis = {
     XXXX---IXX
     XXXXXXXXXX
     `);
+
+    //Nivel 2
   maps.push(`
     I-----XXXX
     XXXXX-XXXX
@@ -56,15 +61,61 @@ const emojis = {
     XX-----OXX
     XXXXXXXXXX
   `);
+
+  //Nivel 3
  maps.push(`
-   XXXXXXXXXX
-   XXXXXXXXXX
-   XXXXXXXXXX
-   XXXXXXXXXX
-   XXXXXXXXXX
-   XXXXX---OX
+   O--XXXXXXX
+   XX--XXXXXX
+   XXX-XXXXXX
+   XXX-XXXXXX
+   XXX--XXXXX
+   XXXX----XX
    XXXXX-XXXX
    XXXXX-XXXX
-   XXXXX---OX
+   XXXXX---IX
    XXXXXXXXXX
   `);
+
+  //Nivel 4
+ maps.push(` 
+  XXXXXXXXXX
+  XXXXXXXXXX
+  XXXXXXXXXX
+  XXXXXXXXXX
+  XI-------X
+  XX--XXXXXX
+  XXX----XXX
+  XXXXXX-XXX
+  XXXXX---OX
+  XXXXX--XXX
+ 
+ `);
+ 
+ //Nivel 5
+ maps.push(` 
+  XXXXXXXXXX
+  XXXXXX--IX
+  XXXXXX-XXX
+  XXX----XXX
+  XO--XXXXXX
+  XXX---XXXX
+  XXXXX-XXXX
+  XXXXX---XX
+  XXXXXXXXXX
+  
+ `);
+ 
+ //Nivel 6
+ maps.push(` 
+  XXXX-----X
+  XXXX-XXXOX
+  X----XXXXX
+  X-XXXXXXXX
+  X---XXXXXX
+  XXX-XXXXXX
+  XXX-XXXXXX
+  XXX---XXXX
+  XXXXX-XXXX
+  XXXXX--IXX
+
+ `);
