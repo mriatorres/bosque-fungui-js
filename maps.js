@@ -124,7 +124,7 @@ const emojis = {
   maps.push(`
    XXXXXXXXXX
    XXXXXXXXIX
-   XXX----X-X
+   XXX------X
    XXX-XX-X-X
    X---XX-X-X
    X-XXXXXXXX
