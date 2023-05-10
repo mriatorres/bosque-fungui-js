@@ -197,6 +197,15 @@ i{
     button {
         margin-top: 25px;
     }
+    .niveles{
+        margin-right: 10%;
+
+    }
+    .niveles span{
+        margin-left: 50%;
+        width: max-content;
+        
+    }
 
     #up,
     #down {
