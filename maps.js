@@ -140,11 +140,11 @@ maps.push(`
 XXX---X-XX
 XXX-----O-
 X----XXXXX
-XXXXX-XXXX
+XXXX--XXXX
 X-----XXXX
 XX-XXXXXXX
 XX------XX
-XXX--X--XX
+XXX--X-XXX
 XI--XXXXXX
 XX-XXXXXXX
 
@@ -160,7 +160,7 @@ maps.push(`
  X----XX--X
  --XX-XXX-X
  -XX------X
- -O-XXX---X
+ -O-XXXXXXX
  X-XXXXXXXX
  
 `);
@@ -169,13 +169,13 @@ maps.push(`
 maps.push(`
  XXX----XXX
  X---XX-OXX
- X-XXXX---X
- X-XXXXX--X
- ---XIX---X
- --X--XX--X
- --X-XX---X
- X-----X--X
- X--X-X---X
- XXX------X
+ X-XXXX-XXX
+ X-XXXX-X-X
+ X-XXIX---X
+ X--X-XXX-X
+ XX---XX--X
+ XXX-X-X--X
+ XXXX----XX
+ XXXXX-XXXX
 
 `);
